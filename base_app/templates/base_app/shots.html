@@ -1,0 +1,15 @@
+{% extends 'base_app/base/base.html' %}
+{% load static %}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'base_app/css/shots.css' %}">
+{% endblock link %}
+{% block content %}
+  <h1 class="text-center mb-3">
+    Screenshots
+  </h1>
+  <div>
+    {% with list=shots %}
+      {% include 'base_app/base/images.html' %}
+    {% endwith %}
+  </div>
+{% endblock content %}

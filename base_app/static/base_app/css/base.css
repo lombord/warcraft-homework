@@ -1,0 +1,58 @@
+body {
+  position: relative;
+  background: url("../img/w3-main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  font-size: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  height: max(100vh, 100%);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Changa One", cursive;
+  margin: 0;
+  color: var(--bs-warning);
+}
+
+button,
+a {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.nav-link:hover {
+  color: var(--bs-warning) !important;
+}
+
+.flex-grid {
+  --item-width: 15em;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, var(--item-width)), 1fr)
+  );
+}

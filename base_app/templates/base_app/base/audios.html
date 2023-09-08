@@ -1,0 +1,8 @@
+{% extends 'base_app/base/list.html' %}
+{% block item %}
+  <div >
+    <audio controls class="w-100">
+      <source src="{{ item.audio.url }}" type="audio/mpeg" />
+    </audio>
+  </div>
+{% endblock item %}

@@ -1,0 +1,10 @@
+{% extends 'base_app/base/list.html' %}
+{% block item %}
+  <div class="border border-warning img-item">
+    <a href="{{ item.image.url }}" target="_blank">
+      <img class="img-fluid w-100 h-100 object-fit-cover"
+           src="{{ item.image.url }}"
+           alt="image-{{ forloop.counter }}" />
+    </a>
+  </div>
+{% endblock item %}

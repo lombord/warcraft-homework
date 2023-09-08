@@ -1,0 +1,7 @@
+<div class="flex-grid gap-3" style="--item-width: {{ width|default:15 }}em">
+  {% for item in list %}
+    {% block item %}
+      {{ item }}
+    {% endblock item %}
+  {% endfor %}
+</div>

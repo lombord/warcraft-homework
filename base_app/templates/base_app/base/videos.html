@@ -1,0 +1,8 @@
+{% extends 'base_app/base/list.html' %}
+{% block item %}
+  <div class="border border-warning p-1">
+    <video class="w-100 object-fit-cover" height="250" controls>
+      <source src="{{ item.video.url }}" type="video/mp4" />
+    </video>
+  </div>
+{% endblock item %}

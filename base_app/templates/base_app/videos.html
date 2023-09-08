@@ -1,0 +1,13 @@
+{% extends 'base_app/base/base.html' %}
+{% block content %}
+  <div>
+    <h1 class="text-center mb-3">
+      {{ title }}
+    </h1>
+    <div>
+      {% with list=videos width=16 %}
+        {% include 'base_app/base/videos.html' %}
+      {% endwith %}
+    </div>
+  </div>
+{% endblock content %}

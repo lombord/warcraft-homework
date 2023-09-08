@@ -1,0 +1,16 @@
+{% extends 'base_app/base/base.html' %}
+{% block content %}
+  <h1 class="text-center mb-3">
+    Audios
+  </h1>
+  <div class="d-flex gap-3 flex-wrap justify-content-center">
+    <h2>
+      <a class="link-underline-opacity-0 link-primary"
+         href="{% url 'soundtracks' %}">Soundtracks</a>
+    </h2>
+    <h2>
+      <a class="link-underline-opacity-0 link-warning"
+         href="{% url 'quotes' %}">Quotes</a>
+    </h2>
+  </div>
+{% endblock content %}

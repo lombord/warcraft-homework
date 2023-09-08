@@ -1,0 +1,32 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-md-top">
+  <div class="container">
+    <a class="navbar-brand text-warning" href="{% url 'home' %}">
+      <img src="{% static 'base_app/img/w3-logo.webp' %}"
+           class="img-fluid object-fit-cover"
+           style="width: 85px"
+           alt="" />
+    </a>
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        {% for elm in menu %}
+          <li class="nav-item">
+            <a class="nav-link active"
+            aria-current="page" href="{% url elm.name %}">
+              {{ elm.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
